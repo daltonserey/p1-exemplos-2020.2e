@@ -1,0 +1,18 @@
+# (c) Dalton Serey
+# Enviroment configuration
+
+# git completion and prompt
+#GITBASHDIR=/usr/local/Cellar/git/2.25.0_1/etc/bash_completion.d
+GITBASHDIR=/usr/lib/git-core
+source $GITBASHDIR/git-sh-prompt
+export GIT_PS1_SHOWDIRTYSTATE=1
+
+# ajusta PATH
+export PATH=~/.local/bin:$PATH
+
+# Set prompt
+export PS1=$CYAN'[\u@\h '"$LGREEN\w$RESET"'$(__git_ps1 " ($YELLOW%s$RESET)")'$CYAN']\n\$ '"\[$RESET\]"
+
+# Install Ruby Gems to ~/gems
+export GEM_HOME="$HOME/gems"
+export PATH="$HOME/gems/bin:$PATH"
